@@ -6,4 +6,7 @@ The interpreter is also the mechanism that evaluates the various effects describ
 
 The reason we have the `delay` directive in zio-direct is to indicate that this code will be evaluated by the interpreter.
 
+The interpreter is responsible for deciding when to context-switch between tasks,
+and is able to do this because it understands the ZIO code that it's executing.
+
 Here's a basic example that shows a ZIO being executed by the interpreter:
